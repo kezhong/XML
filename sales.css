@@ -1,0 +1,26 @@
+body{
+    width:900px;
+    margin:0px auto;
+    font-family:serif;
+}
+.contain{
+    width:600px;
+    margin:0px auto;
+}
+table{
+    width:600px;
+    margin:0px auto;
+    background-color:#A5A5A5;
+}
+tr,td{
+    padding:2px;
+}
+.sans{
+    font-family:sans-serif;
+}
+tr:nth-child(odd){
+    background:#55FFFF;
+}
+tr:nth-child(even){
+    background:#00D4FF;
+}

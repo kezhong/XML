@@ -1,0 +1,107 @@
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:kso="nothin">
+<fo:layout-master-set>
+<fo:simple-page-master master-name="sequence" page-height="11in" page-width="8.5in" margin-top=".5in" margin-bottom=".5in" margin-left=".5in" margin-right=".5in">
+<fo:region-body margin=".5in" />
+</fo:simple-page-master>
+</fo:layout-master-set>
+<fo:page-sequence master-reference="sequence">
+<fo:flow flow-name="xsl-region-body">
+<fo:block text-align="center" font-size="14pt" font-family="sans-serif" text-decoration="underline" font-weight="bold">Sales by date</fo:block>
+<fo:table table-layout="fixed" border-width="1mm" border-style="solid" font-size="12pt" space-before="5pt">
+<fo:table-column column-width="30mm" />
+<fo:table-column column-width="30mm" />
+<fo:table-column column-width="30mm" />
+<fo:table-column column-width="40mm" />
+<fo:table-column column-width="40mm" />
+<fo:table-header text-align="center">
+<fo:table-row>
+<fo:table-cell>
+<fo:block font-weight="bold">Date</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-weight="bold">Amount</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-weight="bold">Paid</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-weight="bold">Description</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-weight="bold">Salesperson</fo:block>
+</fo:table-cell>
+</fo:table-row>
+</fo:table-header>
+<fo:table-body text-align="center">
+<fo:table-row>
+<fo:table-cell>
+<fo:block>2011-11-28</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block text-align="right">9.99</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block text-align="right">9.99</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block>System Cleaning</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block>M. Santos</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell>
+<fo:block>2011-11-28</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block text-align="right">29.99</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block text-align="right">29.99</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block>Virus removal</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block>M. Santos</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell>
+<fo:block>2011-11-28</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block text-align="right">19.99</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block text-align="right">0.00</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block>Hardware install</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block>J.Restrepo</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell number-columns-spanned="5">
+<fo:block>Number of Sales:3</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell number-columns-spanned="5">
+<fo:block>Total sales:$59.97</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell number-columns-spanned="5">
+<fo:block>Average sales:$19.99</fo:block>
+</fo:table-cell>
+</fo:table-row>
+</fo:table-body>
+</fo:table>
+</fo:flow>
+</fo:page-sequence>
+</fo:root>
+

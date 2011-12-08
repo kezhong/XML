@@ -1,0 +1,51 @@
+var oArg = WScript.Arguments;
+var oExt = "xml"
+
+/* Will accept three or four arguments
+  oArg(0) = name of input XML document (no extension)
+  oArg(1) = name of input XSL style sheet (no extension)
+  oArg(2) = name of output document (no extension)
+  oArg(3) = option extension (default is xml)
+*/
+if (oArg.length < 3) //test for at least 3 input arguments
+ { WScript.Echo ("Usage : transform XMLinput XSLinput output (ext)");
+   WScript.Quit();
+ }
+xmlIn  = oArg(0) + ".xml";
+xslIn  = oArg(1) + ".xsl";
+if (oArg.length > 3) // optional extention has been entered
+ {oExt = oArg(3)}
+
+xmlOut = oArg(2) +"." +oExt;
+
+WScript.Echo ("Transforming "+xmlIn+" using "+xslIn+" to "+xmlOut);
+
+var xsl = new ActiveXObject("Microsoft.XMLDOM");
+var xml = new ActiveXObject("Microsoft.XMLDOM");
+
+xml.async = false; // Load input XML document
+xml.load(xmlIn);
+
+if (xml.parseError.errorCode != 0)
+ { WScript.Echo (xmlIn+" Parse Error: "+xml.parseError.reason);}
+
+xsl.async = false; // Load XSL style sheet
+xsl.load(xslIn);
+
+if (xsl.parseError.errorCode != 0)
+ { WScript.Echo (xslIn+" Parse Error: "+xsl.parseError.reason);}
+
+try // Create a new file system object for transformation
+ {var fso = new ActiveXObject("Scripting.FileSystemObject");
+  var a = fso.CreateTextFile(xmlOut, true);
+ }
+catch(e)
+ {WScript.Echo ("CreateTextFile Error: "+e.number+"*"+e.description);
+  WScript.Quit();
+ }
+ try  // Transform the XML document into HTML using transformNode
+  {a.WriteLine(xml.transformNode(xsl));
+   a.Close();
+  }
+ catch(e)
+  {WScript.Echo ("transformNode Error: "+e.number+"*"+e.description);}

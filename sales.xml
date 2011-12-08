@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sales>
+	<sale date="2011-11-28">
+		<amount>9.99</amount>
+		<paid>9.99</paid>
+		<description>System Cleaning</description>
+		<salesperson>M. Santos</salesperson>
+	</sale>
+	<sale date="2011-11-28">
+		<amount>29.99</amount>
+		<paid>29.99</paid>
+		<description>Virus removal</description>
+		<salesperson>M. Santos</salesperson>
+	</sale>
+	<sale date="2011-11-29">
+		<amount>19.99</amount>
+		<paid>0.00</paid>
+		<description>Hardware install</description>
+		<salesperson>J.Restrepo</salesperson>
+	</sale>
+</sales> 
